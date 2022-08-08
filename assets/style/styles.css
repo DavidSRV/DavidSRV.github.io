@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f3eae3;
+    width: 100%;
+}
+
+.container {
+    height: 100vh;
+    background: white;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 10px;
+}
+
+/* Variables */
+
+:root {
+    --colorgris: #797979;
+    --Padding: 0 25px 0 0;
+    --margin: 0 0 0 15px;
+}
+
+
+/* Tarjeta Cotenedora de objetos */
+
+
+.tarjeta {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(5, minmax(20px, 80px));
+    grid-template-areas: "img title"
+        "img name"
+        "img description"
+        "img price"
+        "img shop";
+}
+
+/* Imagen de presentación */
+
+
+.photo {
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/images/image-product-desktop.jpg);
+    background-size: 270px;
+    background-position: center;
+    height: 400px;
+    grid-column: img;
+    border-radius: 10px 0px 0px 10px;
+}
+
+/* Titulo 1 */
+
+.title {
+    display: grid;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--colorgris);
+    letter-spacing: 5px;
+    font-size: 0.6rem;
+    margin: var(--margin);
+}
+
+.title h1 {
+    grid-column: title;
+    display: grid;
+}
+
+/* Nombre titulo */
+
+.name {
+    padding: var(--Padding);
+    margin: var(--margin);
+    grid-column: name;
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    position: relative;
+    bottom: 20px;
+    line-height: 28px;
+}
+
+/* Descripción del producto */
+
+.description {
+    grid-column: description;
+    font-family: 'Montserrat', sans-serif;
+    padding: var(--Padding);
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--colorgris);
+    margin: var(--margin);
+    position: relative;
+    bottom: 5px;
+
+}
+
+/* Precio del producto */
+
+.price {
+    display: flex;
+    grid-column: price;
+    align-items: center;
+    margin: var(--margin);
+    position: relative;
+    bottom: 15px;
+}
+
+.price .pricegreen{
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    color: #377a61;
+}
+
+.price .priceline{
+    font-size: 12px;
+    margin: 0 0 0 15px;
+    text-decoration: line-through;
+    color: var(--colorgris);
+}
+
+
+/* Boton de agregado */
+
+.shop {
+    grid-column: shop;
+    margin: var(--margin);
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    bottom: 20px;
+    background-color: #377a61;
+    border-radius: 10px;
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#correr{
+    margin: 0 10px 0 0;
+}
+
+
+
